@@ -20,7 +20,7 @@ ENV LC_ALL en_US.UTF-8
 RUN apt-get update \
  && apt-get install -y curl unzip \
     python3 python3-numpy python3-scipy python3-setuptools python3-nose python3-pandas \
-	python python-numpy python-scipy python-setuptools python-nose python-pandas \
+    python python-numpy python-scipy python-setuptools python-nose python-pandas \
     pep8 python-pip python-wheel \
     python-sphinx \
  && ln -s /usr/bin/python3 /usr/bin/python \
