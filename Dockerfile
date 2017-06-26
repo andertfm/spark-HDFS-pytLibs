@@ -24,6 +24,15 @@ RUN apt-get update \
  && easy_install3 pip py4j \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
+ 
+RUN pip install pip --upgrade
+#RUN pip install "ipython[notebook]"
+RUN apt-get install -y python-tk
+RUN pip install -U "ipython[notebook]"
+RUN pip install -U nltk
+RUN pip install pandas
+
+EXPOSE 8888
 
 # http://blog.stuart.axelbrooke.com/python-3-on-spark-return-of-the-pythonhashseed
 ENV PYTHONHASHSEED 0
@@ -71,4 +80,4 @@ RUN curl -sL --retry 3 \
  && chown -R root:root $SPARK_HOME
 
 WORKDIR $SPARK_HOME
-CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
+CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master", "ipython"]
