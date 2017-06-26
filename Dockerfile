@@ -25,9 +25,6 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
  
-RUN pip install pip --upgrade
-#RUN pip install "ipython[notebook]"
-RUN apt-get install -y python-tk
 RUN pip install -U "ipython[notebook]"
 RUN pip install -U nltk
 RUN pip install pandas
