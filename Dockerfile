@@ -27,7 +27,6 @@ RUN apt-get update \
  
 RUN pip install -U "ipython[notebook]"
 RUN pip install -U nltk
-RUN pip install -U matplotlib
 RUN pip install pandas
 
 EXPOSE 8888
