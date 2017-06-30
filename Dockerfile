@@ -26,6 +26,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
  
 RUN pip install -U "ipython[notebook]"
+RUN pip install plotly --upgrade
 RUN pip install -U nltk
 RUN pip install pandas
 
