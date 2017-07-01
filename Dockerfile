@@ -27,6 +27,7 @@ RUN apt-get update \
  
 RUN pip install -U "ipython[notebook]"
 RUN pip install plotly --upgrade
+RUN pip install ggplot
 RUN pip install -U nltk
 RUN pip install pandas
 
