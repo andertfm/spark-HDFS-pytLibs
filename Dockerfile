@@ -20,6 +20,7 @@ RUN rm -rf /var/lib/apt/lists/ \
     libssl1.0.0 \
     libssl-dev \
     psmisc \
+    python-setuptools \
     sudo \
   && VER=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver) \
   && wget -q http://download2.rstudio.org/rstudio-server-${VER}-amd64.deb \
