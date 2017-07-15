@@ -31,6 +31,7 @@ RUN pip install -U scipy
 RUN pip install -U ggplot
 RUN pip install -U nltk
 RUN pip install pandas
+RUN pip install -U scikit-learn
 
 EXPOSE 8888
 
